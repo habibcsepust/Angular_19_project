@@ -1,0 +1,9 @@
+<!-- Login page -->
+<div *ngIf="!showRegistration">
+  <app-login (registerClicked)="toggleRegistration(true)"></app-login>
+</div>
+
+<!-- Registration page -->
+<div *ngIf="showRegistration">
+  <app-registration (loginClicked)="toggleRegistration(false)"></app-registration>
+</div>
