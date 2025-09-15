@@ -11,20 +11,6 @@ import { RegistrationComponent } from '../registration/registration.component';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  // username: string = '';
-  // password: string = '';
-  // showRegistration: boolean = false;
-
-  // onLogin() {
-  //   if (this.username === '' || this.password === '') {
-  //     alert('Input Username and Password!');
-  //   } else {
-  //     alert(`Login successful!\nUser: ${this.username}`);
-  //   }
-  // }
-
-
-  
 
   name: string = '';
   email: string = '';

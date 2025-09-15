@@ -1,3 +1,6 @@
+<app-header></app-header>
+
+
 <!-- Login page -->
 <div *ngIf="!showRegistration">
   <app-login (registerClicked)="toggleRegistration(true)"></app-login>
@@ -7,3 +10,6 @@
 <div *ngIf="showRegistration">
   <app-registration (loginClicked)="toggleRegistration(false)"></app-registration>
 </div>
+
+
+<app-footer></app-footer>
