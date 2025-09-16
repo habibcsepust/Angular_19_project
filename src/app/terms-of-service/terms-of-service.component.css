@@ -1,0 +1,27 @@
+.terms-container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.terms-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.terms-container h3 {
+  margin-top: 20px;
+  color: #3f51b5;
+}
+
+.last-note {
+  margin-top: 30px;
+  font-weight: bold;
+  text-align: center;
+}

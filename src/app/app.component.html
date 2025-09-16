@@ -1,15 +1,47 @@
-<app-header></app-header>
+<!-- <app-header 
+  (loginClicked)="toggleRegistration(false)" 
+  (registerClicked)="toggleRegistration(true)">
+</app-header>
 
 
-<!-- Login page -->
+
 <div *ngIf="!showRegistration">
   <app-login (registerClicked)="toggleRegistration(true)"></app-login>
 </div>
 
-<!-- Registration page -->
+<app-privacy-policy></app-privacy-policy>
+
+
 <div *ngIf="showRegistration">
   <app-registration (loginClicked)="toggleRegistration(false)"></app-registration>
 </div>
 
+<app-footer (privacyClicked)="privacyPolicy('privacy')"></app-footer>
+ -->
 
-<app-footer></app-footer>
+ 
+
+ <app-header 
+  (loginClicked)="PageTransition('login')" (registerClicked)="PageTransition('register')">
+</app-header>
+
+<!-- Login Page -->
+<div *ngIf="showRegistration === 'login'">
+  <app-login (registerClicked)="PageTransition('register')"></app-login>
+</div>
+
+<!-- Register Page -->
+<div *ngIf="showRegistration === 'register'">
+  <app-registration (loginClicked)="PageTransition('login')"></app-registration>
+</div>
+
+<!-- Privacy Policy Page -->
+<div *ngIf="showRegistration === 'privacy'">
+  <app-privacy-policy></app-privacy-policy>
+</div>
+
+<div *ngIf="showRegistration === 'termsOfService'">
+  <app-terms-of-service></app-terms-of-service>
+</div>
+
+<app-footer (privacyClicked)="PageTransition('privacy')" (termsOfServiceClicked)="PageTransition('termsOfService')"></app-footer>

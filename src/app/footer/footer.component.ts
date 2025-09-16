@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,5 +8,14 @@ import { CommonModule } from '@angular/common';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
+@Output() privacyClicked = new EventEmitter<void>();
+@Output() termsOfServiceClicked = new EventEmitter<void>();
+onPrivacyClick() {
+    this.privacyClicked.emit(); // parent কে signal
+  }
 
+  onTermOfServiceClick() {
+    this.termsOfServiceClicked.emit(); // parent কে signal
+  }
+  
 }

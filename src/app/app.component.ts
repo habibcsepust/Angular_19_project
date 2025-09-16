@@ -3,13 +3,20 @@ import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,CommonModule,HeaderComponent,FooterComponent,LoginComponent, RegistrationComponent],
+  imports: [
+    RouterOutlet,CommonModule,HeaderComponent
+    ,FooterComponent,PrivacyPolicyComponent
+    ,LoginComponent, RegistrationComponent
+    ,TermsOfServiceComponent
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -17,9 +24,9 @@ import { RegistrationComponent } from './registration/registration.component';
 
 export class AppComponent {
   title = 'Angular_19_project';
-  showRegistration: boolean = false;
-
-  toggleRegistration(value: boolean) {
+  showRegistration: string = "login";
+  
+  PageTransition(value: string) {
     this.showRegistration = value;
   }
 }
