@@ -9,8 +9,9 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-   @Output() loginClicked = new EventEmitter<void>();
+  @Output() loginClicked = new EventEmitter<void>();
   @Output() registerClicked = new EventEmitter<void>();
+  @Output() homeClicked = new EventEmitter<void>();
 
   onLoginClick() {
     this.loginClicked.emit();
@@ -18,6 +19,10 @@ export class HeaderComponent {
 
   onRegisterClick() {
     this.registerClicked.emit();
+  }
+
+  onHomeClick() {
+    this.homeClicked.emit();
   }
  }
 

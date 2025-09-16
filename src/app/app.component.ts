@@ -7,6 +7,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { HomeComponent } from './home/home.component';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ import { RegistrationComponent } from './registration/registration.component';
     ,FooterComponent,PrivacyPolicyComponent
     ,LoginComponent, RegistrationComponent
     ,TermsOfServiceComponent
+    ,HomeComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

@@ -22,7 +22,7 @@
  
 
  <app-header 
-  (loginClicked)="PageTransition('login')" (registerClicked)="PageTransition('register')">
+  (loginClicked)="PageTransition('login')" (registerClicked)="PageTransition('register')" (homeClicked)="PageTransition('home')">
 </app-header>
 
 <!-- Login Page -->
@@ -42,6 +42,10 @@
 
 <div *ngIf="showRegistration === 'termsOfService'">
   <app-terms-of-service></app-terms-of-service>
+</div>
+
+<div *ngIf="showRegistration === 'home'">
+  <app-home></app-home>
 </div>
 
 <app-footer (privacyClicked)="PageTransition('privacy')" (termsOfServiceClicked)="PageTransition('termsOfService')"></app-footer>
