@@ -27,7 +27,7 @@
 
 <!-- Login Page -->
 <div *ngIf="showRegistration === 'login'">
-  <app-login (registerClicked)="PageTransition('register')"></app-login>
+  <app-login (registerClicked)="PageTransition('register')" (loginSuccess)="PageTransition('home')"></app-login>
 </div>
 
 <!-- Register Page -->

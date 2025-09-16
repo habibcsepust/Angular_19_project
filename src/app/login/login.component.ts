@@ -20,7 +20,7 @@ export class LoginComponent {
 
   
 @Output() registerClicked = new EventEmitter<void>();
-
+@Output() loginSuccess = new EventEmitter<void>();
   // Login form submit
   onLogin() {
     if (!this.username || !this.password) {
@@ -28,6 +28,7 @@ export class LoginComponent {
       return;
     }
     alert(`Login successful!\nUsername: ${this.username}`);
+    this.loginSuccess.emit();
   }
 
   // Registration link click
