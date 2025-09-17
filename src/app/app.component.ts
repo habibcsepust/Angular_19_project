@@ -8,6 +8,9 @@ import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.com
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+
 
 @Component({
   selector: 'app-root',
@@ -16,8 +19,8 @@ import { HomeComponent } from './home/home.component';
     RouterOutlet,CommonModule,HeaderComponent
     ,FooterComponent,PrivacyPolicyComponent
     ,LoginComponent, RegistrationComponent
-    ,TermsOfServiceComponent
-    ,HomeComponent
+    ,TermsOfServiceComponent ,HomeComponent
+    ,AboutComponent, ContactComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

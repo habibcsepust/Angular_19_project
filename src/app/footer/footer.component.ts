@@ -10,12 +10,19 @@ import { CommonModule } from '@angular/common';
 export class FooterComponent {
 @Output() privacyClicked = new EventEmitter<void>();
 @Output() termsOfServiceClicked = new EventEmitter<void>();
+@Output() contactClicked = new EventEmitter<void>();
+
+
 onPrivacyClick() {
     this.privacyClicked.emit(); // parent কে signal
   }
 
   onTermOfServiceClick() {
     this.termsOfServiceClicked.emit(); // parent কে signal
+  }
+
+  onContactClick() {
+    this.contactClicked.emit(); // parent কে signal
   }
   
 }

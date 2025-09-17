@@ -12,6 +12,7 @@ export class HeaderComponent {
   @Output() loginClicked = new EventEmitter<void>();
   @Output() registerClicked = new EventEmitter<void>();
   @Output() homeClicked = new EventEmitter<void>();
+  @Output() aboutClicked = new EventEmitter<void>();
 
   onLoginClick() {
     this.loginClicked.emit();
@@ -23,6 +24,9 @@ export class HeaderComponent {
 
   onHomeClick() {
     this.homeClicked.emit();
+  }
+  onAboutClick() {
+    this.aboutClicked.emit();
   }
  }
 
