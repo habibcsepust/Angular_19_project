@@ -1,0 +1,62 @@
+<!-- <app-header 
+  (loginClicked)="toggleRegistration(false)" 
+  (registerClicked)="toggleRegistration(true)">
+</app-header>
+
+
+
+<div *ngIf="!showRegistration">
+  <app-login (registerClicked)="toggleRegistration(true)"></app-login>
+</div>
+
+<app-privacy-policy></app-privacy-policy>
+
+
+<div *ngIf="showRegistration">
+  <app-registration (loginClicked)="toggleRegistration(false)"></app-registration>
+</div>
+
+<app-footer (privacyClicked)="privacyPolicy('privacy')"></app-footer>
+ -->
+
+ 
+
+ <app-header 
+  (loginClicked)="PageTransition('login')" (registerClicked)="PageTransition('register')" 
+  (homeClicked)="PageTransition('home')" (aboutClicked)="PageTransition('about')">
+</app-header>
+
+<!-- Login Page -->
+<div *ngIf="showRegistration === 'login'">
+  <app-login (registerClicked)="PageTransition('register')" (loginSuccess)="PageTransition('home')"></app-login>
+</div>
+
+<!-- Register Page -->
+<div *ngIf="showRegistration === 'register'">
+  <app-registration (loginClicked)="PageTransition('login')"></app-registration>
+</div>
+
+<!-- Privacy Policy Page -->
+<div *ngIf="showRegistration === 'privacy'">
+  <app-privacy-policy></app-privacy-policy>
+</div>
+
+<div *ngIf="showRegistration === 'termsOfService'">
+  <app-terms-of-service></app-terms-of-service>
+</div>
+
+<div *ngIf="showRegistration === 'home'">
+  <app-home></app-home>
+</div>
+
+<div *ngIf="showRegistration === 'about'">
+  <app-about></app-about>
+</div>
+<div *ngIf="showRegistration === 'contact'">
+  <app-contact></app-contact>
+</div>
+
+
+<app-footer (privacyClicked)="PageTransition('privacy')" (termsOfServiceClicked)="PageTransition('termsOfService')"
+(contactClicked)="PageTransition('contact')">
+</app-footer>
